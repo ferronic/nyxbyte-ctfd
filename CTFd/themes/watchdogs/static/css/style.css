@@ -1,0 +1,11 @@
+#boot-screen{
+background:black;
+color:#9b59ff;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:monospace;
+font-size:18px;
+}
+

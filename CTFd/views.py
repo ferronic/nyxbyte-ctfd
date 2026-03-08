@@ -349,11 +349,9 @@ def settings():
 @views.route("/", defaults={"route": "index"})
 @views.route("/<path:route>")
 def static_html(route):
-    """
-    Route in charge of routing users to Pages.
-    :param route:
-    :return:
-    """
+    if route == "index":
+        return redirect("/home")
+
     page = get_page(route)
     if page is None:
         abort(404)
